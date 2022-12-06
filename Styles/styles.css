@@ -1,0 +1,620 @@
+:root {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1vw;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    width: 100vw;
+    height: 100vh;
+    background-color: #441d88;
+    background-image: url('../Images/Background-Image.png');
+    position: relative;
+}
+
+/* #main #bgImage {
+    max-width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+
+#main #bgImage img {
+    height: 98%;
+    position: absolute;
+} */
+
+#main header #logo {
+    width: 8%;
+    position: absolute;
+    top: 5%;
+    left: 3%;
+}
+
+#main header #logo img {
+    width: 100%;
+    cursor: pointer;
+}
+
+#main header .title {
+    margin: 0;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: white;
+    position: absolute;
+    top: 5%;
+    right: 15%;
+}
+
+#main #content {
+    width: 30%;
+    position: absolute;
+    top: 29%;
+    left: 64%;
+}
+
+#main #content h3 {
+    margin-bottom: 6%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    font-weight: bold;
+    line-height: 1.3em;
+    color: white;
+    opacity: 1;
+}
+
+#main #content p {
+    width: 96%;
+    font-size: 1em;
+    font-weight: normal;
+    line-height: 1.5em;
+    text-align: justify;
+    color: white;
+    opacity: 1;
+}
+
+#main #content button {
+    background-color: white;
+    margin-top: 10%;
+    padding: 3% 12%;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 1px 5px 20px #00000029;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #674BB1;
+    opacity: 1;
+    cursor: pointer;
+}
+
+#main #content button:hover {
+    background-color: black;
+    box-shadow: 2px 2px 3px red;
+    color: white;
+}
+
+#main #content button:active {
+    transform: scale(0.98);
+}
+
+#main footer {
+    width: auto;
+    position: absolute;
+    top: 92%;
+    left: 80%;
+}
+
+#main footer .footer-logo {
+    display: inline-block;
+    width: 14%;
+    margin-left: 10%;
+    padding: 1%;
+    box-sizing: border-box;
+}
+
+#main footer .footer-logo img {
+    width: 100%;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+#main footer .footer-logo img:hover {
+    background-color: rgb(255, 0, 80);
+    transform: scale(1.3);
+    transition: 0.3s;
+}
+
+#main #hero {
+    width: 56%;
+    height: 78%;
+    position: absolute;
+    top: 20%;
+    left: 3%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#main #hero #desktop {
+    width: 88%;
+    height: 78%;
+    background-color: white;
+    position: absolute;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+#main #hero #desktop header {
+    width: 100%;
+    height: 12%;
+    margin: 0;
+    padding: 0;
+    background-color: #0A2A3A;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    position: relative;
+}
+
+#main #hero #desktop header #search {
+    width: 35%;
+    background-color: #DEE3E7;
+    font-size: 0.9em;
+    font-weight: 500;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    padding: 0.8% 1%;
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    z-index: 2;
+}
+
+#main #hero #desktop header #search:focus {
+    background-color: white;
+}
+
+header .hamburger {
+    width: 4%;
+    height: 6%;
+    margin: 0;
+    appearance: none;
+    background-color: white;
+    border-radius: 0;
+    position: absolute;
+    top: 48%;
+    left: 90%;
+    z-index: 2;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+header .hamburger::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    top: -280%;
+    left: 0;
+}
+
+.hamburger::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    top: 280%;
+    left: 0;
+}
+
+header .hamburger:checked {
+    transform: rotate(45deg);
+    transition: 0.3s;
+}
+
+header .hamburger:checked::before {
+    transform: rotate(90deg) translate(30%);
+}
+
+header .hamburger:checked::after {
+    display: none;
+}
+
+.menu {
+    width: 100%;
+    height: 280%;
+    padding: 2% 10%;
+    background-color: #0A2A3A;
+    opacity: 0.9;
+    position: absolute;
+    top: -300%;
+    left: 0;
+    z-index: 1;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.menu .list {
+    width: 10%;
+    height: 100%;
+    float: right;
+    list-style: none;
+    text-align: center;
+}
+
+.menu .list li {
+    margin-bottom: 18%;
+}
+
+.menu .list li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    position: relative;
+}
+
+.menu .list li a::after {
+    content: '';
+    width: 0;
+    height: 8%;
+    background-color: white;
+    position: absolute;
+    top: 120%;
+    left: 0;
+    transition: 0.5s;
+}
+
+.menu .list li:hover a::after {
+    width: 100%;
+    transition: 0.5s;
+}
+
+header .hamburger:checked + .menu {
+    top: 100%;
+    transition: 0.3s;
+}
+
+#main #hero #desktop #community {
+    width: 90%;
+    height: 67%;
+    padding: 5%;
+    overflow-y: scroll;
+}
+
+#main #hero #desktop #community section {
+    width: 100%;
+    height: 35%;
+    box-sizing: border-box;
+}
+
+#main #hero #desktop #community section .main-chathead {
+    display: inline-block;
+    width: 10%;
+    border-radius: 100px;
+    padding-top: 2%;
+}
+
+#main #hero #desktop #community section .main-chathead img {
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 100px;
+}
+
+#main #hero #desktop #community section .chat-detail {
+    margin: 0;
+    display: inline-block;
+    width: 45%;
+    padding-left: 5%;
+}
+
+#main #hero #desktop #community section .chat-detail h6 {
+    margin: 0 0 5%;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+#main #hero #desktop #community section .chat-detail p {
+    font-size: 0.5em;
+}
+
+#main #hero #desktop #community section .chat-suggestions {
+    display: inline-block;
+    width: 38%;
+}
+
+#main #hero #desktop #community section .chat-suggestions ul {
+    margin: -5% 0 0 10%;
+    padding: 0;
+}
+
+#main #hero #desktop #community section .chat-suggestions li {
+    display: inline-block;
+    width: 12%;
+    margin-left: 0.5%;
+}
+
+#main #hero #desktop #community section .chat-suggestions li img {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+#main #hero #mobile {
+    width: 32%;
+    height: 80%;
+    background-color: white;
+    position: absolute;
+    top: 20%;
+    left: 67%;
+    z-index: 3;
+    border-radius: 5px;
+    box-sizing: border-box;
+
+    box-shadow: -1px 0 5px black;
+}
+
+#main #hero #mobile header {
+    width: 100%;
+    height: 10%;
+    margin: 0;
+    padding: 0;
+    background-color: #0A2A3A;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: relative;
+}
+
+#main #hero #mobile header #search-mob {
+    width: 50%;
+    background-color: #DEE3E7;
+    font-weight: 500;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    padding: 1.6% 2%;
+    position: absolute;
+    top: 25%;
+    left: 5%;
+}
+
+#main #hero #mobile header #search-mob:focus {
+    background-color: white;
+}
+
+#mobile header .hamburger {
+    width: 8%;
+    height: 6%;
+    position: absolute;
+    top: 45%;
+    left: 86%;
+    z-index: 3;
+}
+
+#mobile header .menu {
+    width: 100%;
+    height: 280%;
+    padding: 2% 20%;
+    background-color: #0A2A3A;
+    opacity: 0.9;
+    position: absolute;
+    top: 100%;
+    left: 150%;
+    z-index: 1;
+    box-sizing: border-box;
+    transition: 0.2s;
+}
+
+#mobile header .menu .list {
+    width: 10%;
+    height: 100%;
+    float: right;
+    list-style: none;
+    text-align: center;
+}
+
+#mobile header .menu .list li {
+    margin-bottom: 18%;
+}
+
+#mobile header .menu .list li a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.9em;
+    position: relative;
+}
+
+#mobile header .hamburger:checked + .menu {
+    left: 0;
+    transition: 0.2s;
+}
+
+#main #hero #mobile #community {
+    width: 90%;
+    height: 80%;
+    padding: 5%;
+    overflow-y: scroll;
+}
+
+#main #hero #mobile #community section {
+    width: 100%;
+    height: 18%;
+    box-sizing: border-box;
+}
+
+#main #hero #mobile #community section .main-chathead {
+    display: inline-block;
+    width: 18%;
+    border-radius: 100px;
+    padding-top: 2%;
+}
+
+#main #hero #mobile #community section .main-chathead img {
+    width: 100%;
+    height: 100%;
+    border: 1.5px solid black;
+    border-radius: 100px;
+}
+
+#main #hero #mobile #community section .chat-detail {
+    margin: 0;
+    display: inline-block;
+    width: 70%;
+    padding-left: 8%;
+}
+
+#main #hero #mobile #community section .chat-detail h6 {
+    margin: 0 0 5%;
+    font-size: 0.6em;
+    font-weight: 500;
+}
+
+#main #hero #mobile #community section .chat-detail p {
+    font-size: 0.3em;
+}
+
+
+
+/* Customized Scroll Bar*/
+
+.mostly-customized-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.mostly-customized-scrollbar::-webkit-scrollbar-track {
+    background-color: lightgray;
+}
+
+.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgb(135, 135, 135);
+    cursor: all-scroll;
+}
+
+.mostly-customized-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(75, 75, 75);
+}
+
+
+
+@media screen and (max-width: 992px) {
+    :root {
+        font-size: 1.3vw;
+    }
+
+    #main header #logo {
+        width: 15%;
+    }
+
+    #main header .title {
+        font-size: 2.5em;
+        position: absolute;
+        top: 5%;
+        right: 5%;
+    }
+
+    #main #hero {
+        width: 70%;
+        height: 40%;
+        position: absolute;
+        top: 15%;
+        left: 15%;
+    }
+
+    #main #content {
+        width: 60%;
+        position: absolute;
+        top: 55%;
+        left: 20%;
+
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    #main #content p {
+        text-align: center;
+    }
+
+    #main footer {
+        width: 50%;
+        position: absolute;
+        top: 93%;
+        left: 29%;
+    }
+
+    #mobile header .menu {
+        width: 100%;
+        height: 200%;
+    }
+
+    #mobile header .hamburger:checked::before {
+        transform: rotate(90deg) translate(40%);
+    }
+    
+}
+
+
+
+@media screen and (max-width: 576px) {
+    :root {
+        font-size: 1.5vw;
+    }
+
+    #main header #logo {
+        width: 26%;
+    }
+
+    #main header .title {
+        font-size: 3.8em;
+        position: absolute;
+        top: 5%;
+        right: 5%;
+    }
+
+    #main #hero {
+        width: 70%;
+        height: 30%;
+        position: absolute;
+        top: 18%;
+        left: 15%;
+    }
+
+    #main #content {
+        width: 70%;
+        position: absolute;
+        top: 50%;
+        left: 16%;
+
+        font-size: 2em;
+        text-align: center;
+    }
+
+    #main #content p {
+        text-align: center;
+    }
+
+    #main footer {
+        width: 60%;
+        position: absolute;
+        top: 93%;
+        left: 26%;
+    }
+
+    #mobile header .menu {
+        width: 100%;
+        height: 220%;
+    }
+
+    header .hamburger:checked::before {
+        transform: rotate(90deg) translate(45%);
+    }
+
+    #mobile header .hamburger:checked::before {
+        transform: rotate(90deg) translate(40%);
+    }
+}
